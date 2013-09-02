@@ -1,0 +1,35 @@
+查看当前shell
+echo  $SHELL
+#shell-name
+
+env | grep name
+set | grep name
+本地变量 环境变量
+
+a=${name}0000
+a="${name} hello" 包含空格的字符串
+单引号将引号内的字符都变成普通字符 都是纯文本的字符
+
+位置变量$0、$1...$9  传的参数  ${10}
+后台运行 natecase  test.ncd &
+
+$?  --上一个命令执行的结果，0为成功非0失败
+$!  --上一个后台命令的PID
+$$  --这个程序的PID
+$#  --位置参数的个数（不包括命令本身）
+$*  --这个程序的所有参数
+$@  --列出所有的参数
+
+
+declare 声明
+declare -i int -p print -a array -r readonly -x(全局变量)
+a=`ls /tmp`
+echo $a
+
+a=$(ls)
+
+uname -n | cut -d . -f1
+
+登录
+最后登录执行的脚本  /etc/rc.local
+
